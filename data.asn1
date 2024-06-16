@@ -1,0 +1,36 @@
+ExampleModule DEFINITIONS ::= BEGIN
+
+-- Primitive Types
+
+ExampleData ::= SEQUENCE {
+    booleanValue BOOLEAN,
+    integerValue INTEGER,
+    bitstringValue BIT STRING,
+    octetstringValue OCTET STRING,
+    nullValue NULL
+}
+
+-- Constructed Types
+ExampleSequence ::= SEQUENCE {
+    sequenceField1 INTEGER,
+    sequenceField2 UTF8String
+}
+
+ExampleSet ::= SET {
+    setField1 INTEGER,
+    setField2 IA5String
+}
+
+ExampleChoice ::= CHOICE {
+    choiceField1 INTEGER,
+    choiceField2 UTF8String
+}
+
+ExampleEnumerated ::= ENUMERATED {
+    option1(1),
+    option2(2),
+    option3(3)
+}
+
+ExampleObjectIdentifier ::= OBJECT IDENTIFIER
+END
